@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+  {% block title %}Home{% endblock %}
+  {% block content%}
+  <div class="content">
+    <div class="hero">
+      <h1>Your personal private 100% customizable online journal.</h1>
+      <a href="{% url 'login' %}">Start your personal now</a>
+    </div>
+    <div>
+      <img src="{% static 'pages/images/hero-image-03.webp' %}" alt="">
+    </div>
+  </div>
+  {% endblock %}

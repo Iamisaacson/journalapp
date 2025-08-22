@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+{% block content %}
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.content }}</p>
+  <a href="{% url 'edit_post' post.slug %}" class="edit">Edit</a>
+  <a href="{% url 'delete_post' post.slug %}">Deletet</a>
+<small>{{ post.short_content }}</small>
+<br>
+<small>{{ post.published_date }}</small>
+
+<!-- <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.content|truncatewords:30 }}</p>
+  </div>
+</div> -->
+{% endblock  %}

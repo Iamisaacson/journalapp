@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'registration/css/style.css' %}">
+<div class="center">
+  <div class="container" id="container">
+  <div class="text">Login Form</div>
+    <form method="post">
+    {% csrf_token %}
+    <div class="data">
+      {{ form.username.label_tag }}
+      {{ form.username }}
+    </div>
+    <div class="data">
+      {{ form.password.label_tag }}
+      {{ form.password }}
+    </div>
+    <div class="btn">
+      <div class="inner"></div>
+      <button type="submit">Login</button>
+    </div>
+    <div class="signup-link">Not a member? <a href="{% url 'register' %}">Sign up now</a></div>
+    </form>
+  </div>
+
+</div>
