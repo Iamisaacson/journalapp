@@ -87,8 +87,8 @@ import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default=os.getenv('postgresql://journallappbd_user:Itqz9EdV3X06Fl8Gi5LC0NeOxDHye7YO@dpg-d2m6s6ffte5s739fb0og-a/journallappbd',
-        conn_max_age=600)
+        default='postgresql://journallappbd_user:Itqz9EdV3X06Fl8Gi5LC0NeOxDHye7YO@dpg-d2m6s6ffte5s739fb0og-a/journallappbd',
+        conn_max_age=600
     )
 }
 
