@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*t_uz^omjv_%b_(37-wsx&*bsq$75+jh2@3$k9pe864&$@(@7h
 DEBUG = False
 
 ALLOWED_HOSTS = [
-  'journalapp.onrender.com'
+  'https://journalapp-ied3.onrender.com/'
 ]
 
 
