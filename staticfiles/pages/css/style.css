@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+.hello {
+  color: #fff;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,11 +25,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 3rem;
+  /* margin: 2rem 0; */
+  padding: 2rem 3rem;
+  background-color: rgb(24 15 15);
 }
 
 .logo a {
   font-size: 2rem;
+  color: #fff;
+}
+
+.logoutbn {
+  border-width: 0;
+  background-color: rgb(195, 217, 237);
+  color: -webkit-link;
+  font-size: 1rem;
+}
+
+.logoutbn:hover {
+  text-decoration: underline;
 }
 
 nav {
@@ -36,41 +54,101 @@ nav {
 
 nav a {
   padding: 1rem 2rem;
+  color: #fff;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .content {
-  display: flex;
   margin: 2rem;
+}
+.content .hero {
+  display: flex;
 }
 
 .content .hero h1 {
-  margin: 2rem 0;
+  margin: 3rem 0 4rem 0;
+  font-size: 3rem;
 }
 
 .content .hero a {
-  background-color: rgb(231, 231, 35);
+  background-color: rgb(10, 10, 9);
   padding: 0.8rem 1.5rem;
-  color: rgb(24, 23, 23);
+  color: rgb(255, 255, 255);
   font-weight: 600;
+  border-radius: 6px;
+}
+
+.about {
   margin: 2rem 0;
 }
 
-div {
+.about h2 {
+  /* text-align: center; */
+  font-size: 2rem;
+}
+
+.about p {
+  font-size: 1.5rem;
+}
+
+.features h3 {
+  font-size: 2rem;
+}
+
+.features ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.features ul li {
+  width: 13rem;
+  /* display: flex; */
+  justify-content: center;
+}
+
+.features ul li h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.alert {
   color: green;
 }
 
 
  /* Create Form  */
 
+ .post-form {
+  margin: 2rem;
+}
+
+.post-form h2 {
+  font-size: 2rem;
+  text-align: center;
+
+}
+
 .create-form {
   background-color: rgb(195, 217, 237);
-  margin: 1rem 2rem;
+  margin: 50px auto;
   width: 450px;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e6e6e6;
 }
 
 .create-form h2 {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 25px;
+  color: #1a2b4c;
 }
 
 .create-form p {
@@ -80,7 +158,81 @@ div {
 }
 
 .create-form label {
-  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1a2b4c;
+}
+
+
+.create-form input[type="text"],
+.create-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.create-form input[type="text"]:focus,
+.create-form textarea:focus {
+  border-color: #b88b4a; /* Light brown */
+  outline: none;
+}
+
+/* Textarea */
+.create-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.create-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #b88b4a; /* Light brown */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.create-form button:hover {
+  background-color: #a3773a;
+}
+
+.create-form button:active {
+  transform: scale(0.98);
+}
+
+/* Messages */
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.create-form input {
+  border-radius: 8px;
+}
+
+.create-btn {
+  background-color: rgb(24, 52, 137);
+  padding: 0.8rem 1.5rem;
+  color: rgb(24, 23, 23);
+  font-weight: 600;
+  margin: 2rem 0;
 }
 
 footer {
@@ -103,3 +255,48 @@ footer ul {
 footer ul li {
   padding-left: 1rem;
 }
+
+
+/* Blog page */
+
+.blog {
+  min-width: 20rem;
+  /* height: 27rem; */
+  margin: 3rem 2rem 2rem;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box-item {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1.5rem 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.box-item a:hover {
+  text-decoration: underline;
+}
+
+.box-item small {
+  padding: 1rem 0 0;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.box-item p {
+  text-align: start;
+}
+
+/* Post Form */

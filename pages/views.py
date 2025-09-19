@@ -20,6 +20,7 @@ def contact(request):
     form = ContactForm()
   return render(request, 'pages/contact.html', {'form': form})
 
+@login_required
 def about(request):
   return render(request, 'pages/about.html')
 

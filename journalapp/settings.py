@@ -48,6 +48,8 @@ INSTALLED_APPS = [
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/blog/'
 LOGOUT_REDIRECT_URL = '/login/'
+# if user.is_authenticated:
+  
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -92,6 +94,13 @@ DATABASES = {
         default='postgresql://journallappbd_user:Itqz9EdV3X06Fl8Gi5LC0NeOxDHye7YO@dpg-d2m6s6ffte5s739fb0og-a/journallappbd',
         conn_max_age=600
     )
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 

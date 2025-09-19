@@ -4,11 +4,37 @@
   {% block content%}
   <div class="content">
     <div class="hero">
-      <h1>Your personal private 100% customizable online journal.</h1>
-      <a href="{% url 'login' %}">Start your personal now</a>
+      <div>
+        <h1>Your personal private 100% customizable online journal.</h1>
+        <a href="{% url 'login' %}">Start your personal journal now</a>
+      </div>
+      <div>
+        <img src="{% static 'pages/images/hero-image-03.webp' %}" alt="">
+      </div>
     </div>
-    <div>
-      <img src="{% static 'pages/images/hero-image-03.webp' %}" alt="">
+    <div class="about">
+      <h2>About</h2>
+      <p>My Journal App is a personal journaling app where you can securely write and manage your thoughts</p>
+    </div>
+    <div class="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>
+          <img src="{% static 'pages/images/user-solid-full.svg' %}" alt="">
+          <h3>User Accounts</h3>
+          <p>Sign up and log in to keep your entries private</p>
+        </li>
+        <li>
+          <img src="{% static 'pages/images/pen-solid-full.svg' %}" alt="">
+          <h3>Create Entries</h3>
+          <p>Write new journal entrie and save your thoughts</p>
+        </li>
+        <li>
+          <img src="{% static 'pages/images/tablet-solid-full.svg' %}" alt="">
+          <h3>Manage Entries</h3>
+          <p>View, edit and delete your journal entries</p>
+        </li>
+      </ul>
     </div>
   </div>
   {% endblock %}

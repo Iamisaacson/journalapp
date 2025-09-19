@@ -27,7 +27,7 @@ class Post(models.Model):
     super().save(*args, **kwargs)
 
   def short_content(self):
-    return self.content[:100] + "..."
+    return self.content[:300] + "..."
 
   def __str__(self):
     return self.title

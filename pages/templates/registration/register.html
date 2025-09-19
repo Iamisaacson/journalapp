@@ -7,13 +7,20 @@
   <div class="text">Register</div>
     <form method="POST">
     {% csrf_token %}
+    {{ form.non_field_errors }}
     <div class="data">
       {{ form.username.label_tag }}
       {{ form.username }}
+      {% for error in form.username.errors %}
+        <p>{{ error }}</p>
+      {% endfor %}
     </div>
     <div class="data">
       {{ form.password1.label_tag }}
       {{ form.password1 }}
+      {% for error in form.password1.errors %}
+        <p>{{ error }}</p>
+      {% endfor %}
     </div>
     <div class="data">
       {{ form.password2.label_tag}}
@@ -22,6 +29,11 @@
     <div class="btn">
       <div class="inner"></div>
       <button type="submit">register</button>
+    </div>
+    <div class="error-message">
+    {% for error in form.password2.errors %}
+      <p>{{ error }}</p>
+    {% endfor %}
     </div>
 
   </form>
